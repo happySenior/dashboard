@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notification Settings</title>
+    <title>Report List </title>
     <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./files/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./files/favicon/favicon-16x16.png">
@@ -306,72 +306,361 @@
     </div>
 </header>
                 <main class="page">
-                    <section class="settings notification-settings">
-                        <div class="settings__container">
-                            <div class="settings__top-section display-mobile">
-                                <div class="settings__label">Notifications</div>
-                                <div class="settings__close icon-close"></div>
+                    <section class="report">
+                        <div class="report__container">
+                            <div class="report__inner">
+                                <div class="report__top top-report">
+                                    <div class="top-report__title">Reports List </div>
+                                    <div class="top-report__options">
+                                        <div class="tab">
+                                            <div class="tab-item _active">Summary Statistics</div>
+                                            <div class="tab-item">Funnel Stages of Сandidates</div>
+                                            <div class="tab-item">Recruiter Efficiency</div>
+                                            <div class="tab-item">Funnel Stages Speed</div>
+                                        </div>
+                                        <button type="button" class="top-report__more icon-arrow-small">See more filters <span>(3)</span></button>
+                                    </div>
+                                </div>
+                                <div class="report-filters">
+                                    <div class="report-filters__top-label display-mobile">
+                                        <span>Summary Statictics Filters</span>
+                                        <button type="button" class="icon-close"></button>
+                                    </div>
+                                    
+                                    <div class="report-filters__wrapper">
+                                        <div class="report-filters__column">
+                                            <div class="report-filters__label icon-filter">
+                                                <span>Filters</span>
+                                                <button class="button-add"></button>
+                                            </div>
+                                            <div class="report-filters__body">
+                                                <div class="report-filters__item item-report-filters icon-calendar">
+                                                    <div class="item-report-filters__title">Date</div>
+                                                    <button type="button" class="item-report-filters__text">19 Oct – 21 Oct</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-filters icon-jobs">
+                                                    <div class="item-report-filters__title">Jobs</div>
+                                                    <button type="button" class="item-report-filters__text">2 Selected</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-filters icon-companies">
+                                                    <div class="item-report-filters__title">Companies</div>
+                                                    <button type="button" class="item-report-filters__text">Selected 1</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-filters icon-team">
+                                                    <div class="item-report-filters__title">Recruiters</div>
+                                                    <button type="button" class="item-report-filters__text">Selected 5</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-filters icon-type">
+                                                    <div class="item-report-filters__title">Sources</div>
+                                                    <button type="button" class="item-report-filters__text">Selected 3</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-filters icon-priority">
+                                                    <div class="item-report-filters__title">Statuses</div>
+                                                    <button type="button" class="item-report-filters__text">All</button>
+                                                    <button type="button" class="close-btn"></button>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="report-filters__column">
+                                            <div class="report-filters__label icon-resend">
+                                                <span>Group by</span>
+                                                <button id="group-btn" class="button-add"></button>
+                                            </div>
+                                            <div class="report-filters__body">
+                                                <button id="group-btn" class="button-add display-mobile"></button>
+                                                <div class="report-filters__item item-report-group">
+                                                    <div class="item-report-group__text">Date</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="report-filters__column">
+                                            <div class="report-filters__label icon-metrics">
+                                                <span>Metrics</span>
+                                                <button class="button-add"></button>
+                                            </div>
+                                            <div class="report-filters__body">
+                                                <button class="button-add display-mobile"></button>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Days</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">New Candidates</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Active Candidates</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Closed Candidates</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Companies</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Tasks Done</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Meetings Done</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Meetings Done</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                                <div class="report-filters__item item-report-metrics">
+                                                    <button class="icon-select"></button>
+                                                    <div class="item-report-metrics__text">Meetings Done</div>
+                                                    <button class="close-btn"></button>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <div class="report-filters__options">
+                                        <div class="report-filters__options-body">
+                                            <button class="report-filters__otpions-button icon-save">Save template</button>
+                                            <button class="report-filters__otpions-button icon-copy">Use saved template</button>
+                                        </div>
+                                        <div class="report-filters__options-buttons">
+                                            <button class="cobtn">Reset Filters</button>
+                                            <button class="button-primary">Apply</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="settings__title display-pc">Notifications</div>
-                            <div class="notification-settings__wrapper">
-                                <div class="notification-settings__top">
-                                    <div class="notification-settings__top-item">Notificate</div>
-                                    <div class="notification-settings__top-item">Browser</div>
-                                    <div class="notification-settings__top-item">E-mail</div>
-                                </div>
-                                <div class="notification-settings__body">
-                                    <div class="notification-settings__row">
-                                        <div class="notification-settings__column">Tasks assigned to me </div>
-                                        <div class="notification-settings__column">
-                                            <span>Browser</span>
-                                            <label class="radio-checkbox" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                        <div class="notification-settings__column">
-                                            <span>E-mail</span>
-                                            <label class="radio-checkbox" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="notification-settings__row">
-                                        <div class="notification-settings__column">New Message</div>
-                                        <div class="notification-settings__column">
-                                            <span>Browser</span>
-                                            <label class="radio-checkbox _active" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                        <div class="notification-settings__column">
-                                            <span>E-mail</span>
-                                            <label class="radio-checkbox" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="notification-settings__row">
-                                        <div class="notification-settings__column">Meeting assigned to me</div>
-                                        <div class="notification-settings__column">
-                                            <span>Browser</span>
-                                            <label class="radio-checkbox" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                        <div class="notification-settings__column">
-                                            <span>E-mail</span>
-                                            <label class="radio-checkbox _active" for="notification-settings-check-1">
-                                                <button type="button" class="radio-checkbox__button"></button>
-                                                <input type="checkbox" name="checkbox" id="notification-settings-check-1">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="report__body">
+                                <table class="table-list__table" cellpadding = "20" cellspacing = "0">
+                                    <thead>
+                                        <tr class="table-list__tr-main">
+                                            <th class="bar-table-list__item">
+                                                <span>
+                                                    <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3.5 1V12M3.5 1L6 3.44444M3.5 1L1 3.44444" stroke="#374151" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    Date
+                                                </span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">New Candidates</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Active Candidates</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Closed Candidates</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Companies</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Tasks Done</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Meetings Done</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Tasks Done</span>
+                                            </th>
+                                            <th class="bar-table-list__item">
+                                                <span class="icon-change">Meetings Done</span>
+                                            </th>
+                                        </tr>   
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-list__item item-table-list">
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">21 Oct 2022</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">+31</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">10</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">2</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">3</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">4</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">8</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">14</div>
+                                            </td>
+                                            <td class="item-table-list__item-td">
+                                                <div class="item-table-list__text">1</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </section>
